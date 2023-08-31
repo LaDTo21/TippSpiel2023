@@ -12,14 +12,14 @@ Run Defense,
 Pass Offense,
 Pass Defense,
 (Injuries),
-(Win- oder Losestreak),
+(Win- oder Loss-streak),
 
 Wie wird der Vergleich aussehen? 
-
+Die einzelnen werte werden addiert und am ende subtrahiert.
+Ist die Zahl positiv gewinnt das home team, ist sie negativ, gewinnt das away team.
 
 Wie wird die Ausgabe aussehen?
 Manuelle Abfrage,
 Auswertung der letzten Woche,
 Tipps der Woche
 
-lek4jhpoepohkporjkhpoajeporkh
