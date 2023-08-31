@@ -1,0 +1,25 @@
+Datentyp: Excel
+Dateien: Statistics, Schedule, QB-Ranking, Ergebnisse 
+Auswertung: Python Pandas
+
+Was wird ausgewertet?
+3rd Down Conversion,
+QB,
+Turnover,
+(Home/ Away),
+Run Offense,
+Run Defense,
+Pass Offense,
+Pass Defense,
+(Injuries),
+(Win- oder Losestreak),
+
+Wie wird der Vergleich aussehen? 
+
+
+Wie wird die Ausgabe aussehen?
+Manuelle Abfrage,
+Auswertung der letzten Woche,
+Tipps der Woche
+
+
