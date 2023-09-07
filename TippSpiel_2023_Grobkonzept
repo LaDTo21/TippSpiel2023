@@ -14,8 +14,11 @@ Pass Defense,
 (Injuries),
 (Win- oder Loss-streak),
 
+Wie wird die Gewichtung aussehen?
+Der generell beste Wert gilt als 100 %, alle anderen Werte werden demnach an diesem gemessen
+
 Wie wird der Vergleich aussehen? 
-Die einzelnen werte werden addiert und am ende subtrahiert.
+Die einzelnen Werte werden addiert und am Ende subtrahiert.
 Ist die Zahl positiv gewinnt das home team, ist sie negativ, gewinnt das away team.
 
 Wie wird die Ausgabe aussehen?
