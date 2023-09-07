@@ -30,3 +30,10 @@ Flüche? (Ein Team, welches besonders schlecht gegen ein anderes spielt
             / Hat noch nie bei den und den Gegebenheiten verloren)
     Gibt es bestimmte Flüche
     Wie lauten die
+
+
+#############
+Zusammenführen der einzelnen Dateien
+    Erstellen einer Datenklasse in Python
+        Alle werte werden in eine Datenklasse gefüllt und danach werden die Berechnungen gemacht
+    Alle Berechnungen werden über abfragen gemacht

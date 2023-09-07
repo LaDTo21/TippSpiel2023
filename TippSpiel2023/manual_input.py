@@ -5,4 +5,3 @@ def manual_input():
         file.seek(0)
         exec(file.readline())
         file.truncate(0)
-
