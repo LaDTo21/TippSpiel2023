@@ -5,3 +5,4 @@ for i in range(1, (Statistics.schedule_df.shape[1] - 1)):
 
 print((Statistics.schedule_df.shape[1] - 1))
 print(Statistics.schedule_df.shape)
+print(Statistics.qb_df.shape)
