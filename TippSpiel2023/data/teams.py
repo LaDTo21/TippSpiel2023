@@ -24,6 +24,7 @@ class Team:
              / Statistics.qb_df['EPA+CPOE composite'].max() * 100)
 
 
+@dataclass(frozen=True)
 class Teams:
     chiefs = Team(name="Kansas City Chiefs", short_name="Chiefs", qb_name="P.Mahomes")
     dolphins = Team(name="Miami Dolphins", short_name="Dolphins", qb_name="T.Tagovailoa")
@@ -50,7 +51,7 @@ class Teams:
     patriots = Team(name="New England Patriots", short_name="Patriots", qb_name="M.Jones")
     saints = Team(name="New Orleans Saints", short_name="Saints", qb_name="A.Dalton")
     giants = Team(name="New York Giants", short_name="Giants", qb_name="D.Jones")
-    jets = Team(name="New York Jets", short_name="Jets", qb_name="")
+    jets = Team(name="New York Jets", short_name="Jets", qb_name="A.Rodgers")
     steelers = Team(name="Pittsburgh Steelers", short_name="Steelers", qb_name="K.Pickett")
     forty_nine_ers = Team(name="San Francisco 49ers", short_name="49ers", qb_name="J.Garoppolo")
     seahawks = Team(name="Seattle Seahawks", short_name="Seahawks", qb_name="G.Smith")

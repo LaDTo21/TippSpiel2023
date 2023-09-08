@@ -1,3 +1,7 @@
 from TippSpiel2023.TippSpiel2023.data.statistics import Statistics
 
-print(Statistics.qb_df.loc[Statistics.qb_df['Team'] == 'Chiefs', 'EPA+CPOE composite'].values[0])
+for i in range(1, (Statistics.schedule_df.shape[1] - 1)):
+    print(Statistics.schedule_df.columns[i])
+
+print((Statistics.schedule_df.shape[1] - 1))
+print(Statistics.schedule_df.shape)
