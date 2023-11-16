@@ -1,7 +1,3 @@
-from typing import List
-
-import pandas as pd
-
 from TippSpiel2023.TippSpiel_2023.data.statistics import Statistics
 
 
@@ -26,13 +22,16 @@ class Team:
         self.offense_scp = Statistics.saved_offense_df['Sc%'].loc[Statistics.saved_offense_df['Tm'] == name].values[0]
         self.offense_yp = Statistics.saved_offense_df['Y/P'].loc[Statistics.saved_offense_df['Tm'] == name].values[0]
         self.offense_1std = Statistics.saved_offense_df['1stD'].loc[Statistics.saved_offense_df['Tm'] == name].values[0]
-        self.offense_pass_td = Statistics.saved_offense_df['TD'].loc[Statistics.saved_offense_df['Tm'] == name].values[0]
+        self.offense_pass_td = (
+            Statistics.saved_offense_df['TD'].loc[Statistics.saved_offense_df['Tm'] == name].values)[0]
         self.offense_nya = Statistics.saved_offense_df['NY/A'].loc[Statistics.saved_offense_df['Tm'] == name].values[0]
         self.defense_scp = Statistics.saved_defense_df['Sc%'].loc[Statistics.saved_defense_df['Tm'] == name].values[0]
         self.defense_yp = Statistics.saved_defense_df['Y/P'].loc[Statistics.saved_defense_df['Tm'] == name].values[0]
         self.defense_1std = Statistics.saved_defense_df['1stD'].loc[Statistics.saved_defense_df['Tm'] == name].values[0]
-        self.defense_rush_td = Statistics.saved_defense_df['TD_1'].loc[Statistics.saved_defense_df['Tm'] == name].values[0]
-        self.defense_rush_yds = Statistics.saved_defense_df['Yds_2'].loc[Statistics.saved_defense_df['Tm'] == name].values[0]
+        self.defense_rush_td = (
+            Statistics.saved_defense_df['TD_1'].loc[Statistics.saved_defense_df['Tm'] == name].values)[0]
+        self.defense_rush_yds = (
+            Statistics.saved_defense_df['Yds_2'].loc[Statistics.saved_defense_df['Tm'] == name].values)[0]
 
 
 class Teams:

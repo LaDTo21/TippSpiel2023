@@ -1,6 +1,4 @@
 import datetime
-
-import pandas as pd
 import pytz
 from TippSpiel2023.TippSpiel_2023.data.statistics import Statistics
 from TippSpiel2023.TippSpiel_2023.data.teams import Teams, Team
@@ -65,4 +63,3 @@ class ThisWeek:
                         del temp_team_list[team]
                         del temp_team_list[team3]
             count += 1
-

@@ -26,7 +26,6 @@ def weighting(data_frame, bigger1, bigger2):
     df = df.apply(lambda row: function(row, mean_list, bigger1), axis=1)
     df2 = df2.apply(lambda row: function(row, mean_list, bigger2), axis=1)
     df = pd.concat([df, df2])
-    #print(df.to_markdown())
     print(df.sum())
 
 
@@ -39,9 +38,11 @@ class Weighting:
     weighting(Statistics.offense_2021(), True, False)
     weighting(Statistics.offense_2020(), True, False)
     weighting(Statistics.offense_2019(), True, False)
-    #Offense Y/P, 1stD, Pass TD, NY/A, Sc%
-    #Defense Y/P, 1stD, Rush TD, Rush Yds, Sc%
+
     '''
+        Offense Y/P, 1stD, Pass TD, NY/A, Sc%
+        Defense Y/P, 1stD, Rush TD, Rush Yds, Sc% 
+    
         32.0 30.0 31.0 31.0 | 29.0 32.0 31.0 31.0 | 31 | 31 | 
         26.0 24.0 27.0 26.0 | 27.0 28.0 25.0 28.0 | 26 | 27 | 
         17.0 20.0 25.0 20.0 | 16.0 19.0 16.0 19.0 | 20 | 18 | 
