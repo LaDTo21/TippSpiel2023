@@ -30,16 +30,14 @@ class Statistics:
         return df
 
     last_week_results_url = 'http://www.playoffstatus.com/nfl/nflschedule.html'
-    schedule_df_url = 'https://raw.githubusercontent.com/LaDTo21/TippSpiel2023/main/2023_NFL_Schedule.csv'
+    schedule_df_url = '../resources/2023_NFL_Schedule.csv'
     defense_url = 'https://www.pro-football-reference.com/years/2023/opp.htm#team_stats'
     offense_url = 'https://www.pro-football-reference.com/years/2023/#team_stats'
 
     schedule_df = pd.read_csv(schedule_df_url, sep=';')
     last_week_results_df = pd.read_html(last_week_results_url)
-    saved_defense_df = pd.read_csv('C:\\Users\\mstalgies\\PycharmProjects\\TippSpiel_2023\\TippSpiel2023\\'
-                                   'TippSpiel_2023\\data\\saved_defense.csv')
-    saved_offense_df = pd.read_csv('C:\\Users\\mstalgies\\PycharmProjects\\TippSpiel_2023\\TippSpiel2023\\'
-                                   'TippSpiel_2023\\data\\saved_offense.csv')
+    saved_defense_df = pd.read_csv('../resources/saved_defense.csv')
+    saved_offense_df = pd.read_csv('../resources/saved_offense.csv')
     defense_df = prepare_tables(defense_url, 0)
     offense_df = prepare_tables(offense_url, 4)
 
@@ -51,10 +49,8 @@ class Statistics:
 
     @classmethod
     def current_to_csv(cls):
-        cls.defense_df.to_csv('C:\\Users\\mstalgies\\PycharmProjects\\TippSpiel_2023\\TippSpiel2023\\'
-                              'TippSpiel_2023\\data\\saved_defense.csv')
-        cls.offense_df.to_csv('C:\\Users\\mstalgies\\PycharmProjects\\TippSpiel_2023\\TippSpiel2023\\'
-                              'TippSpiel_2023\\data\\saved_offense.csv')
+        cls.defense_df.to_csv('../resources/saved_defense.csv')
+        cls.offense_df.to_csv('../resources/saved_offense.csv')
 
     @classmethod
     def defense_2022(cls):
