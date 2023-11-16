@@ -1,40 +1,40 @@
-from dataclasses import dataclass, fields, field
 from typing import List
 
 import pandas as pd
 
-from TippSpiel2023.TippSpiel2023.data.statistics import Statistics
+from TippSpiel2023.TippSpiel_2023.data.statistics import Statistics
 
 
-@dataclass
 class Team:
-    name: str = ""
-    short_name: str = ""
-    offense_exp: float = 0
-    offense_yp: float = 0
-    offense_1std: int = 0
-    offense_pass_td: int = 0
-    defense_exp: int = 0
-    defense_yp: float = 0
-    defense_1std: int = 0
-    defense_rush_td: int = 0
-    list: List = field(default_factory=lambda: [])
+    name: str
+    short_name: str
+    offense_scp: float
+    offense_yp: float
+    offense_1std: int
+    offense_pass_td: int
+    offense_nya: float
+    defense_scp: int
+    defense_yp: float
+    defense_1std: int
+    defense_rush_td: int
+    defense_rush_yds: int
 
     def __init__(self, name):
+
         self.name = name
         self.short_name = name.split()[-1]
-        self.offense_exp = Statistics.offense_df['EXP'].loc[Statistics.offense_df['Tm'] == name].values[0]
-        self.offense_yp = Statistics.offense_df['Y/P'].loc[Statistics.offense_df['Tm'] == name].values[0]
-        self.offense_1std = Statistics.offense_df['1stD'].loc[Statistics.offense_df['Tm'] == name].values[0]
-        self.offense_pass_td = Statistics.offense_df['TD'].loc[Statistics.offense_df['Tm'] == name].values[0]
-        self.defense_exp = Statistics.defense_df['EXP'].loc[Statistics.defense_df['Tm'] == name].values[0]
-        self.defense_yp = Statistics.defense_df['Y/P'].loc[Statistics.defense_df['Tm'] == name].values[0]
-        self.defense_1std = Statistics.defense_df['1stD'].loc[Statistics.defense_df['Tm'] == name].values[0]
-        self.defense_rush_td = Statistics.defense_df['TD_1'].loc[Statistics.defense_df['Tm'] == name].values[0]
-        self.list = ['EXP', 'Y/P', '1stD', 'TD', 'EXP', 'Y/P', '1stD', 'TD_1']
+        self.offense_scp = Statistics.saved_offense_df['Sc%'].loc[Statistics.saved_offense_df['Tm'] == name].values[0]
+        self.offense_yp = Statistics.saved_offense_df['Y/P'].loc[Statistics.saved_offense_df['Tm'] == name].values[0]
+        self.offense_1std = Statistics.saved_offense_df['1stD'].loc[Statistics.saved_offense_df['Tm'] == name].values[0]
+        self.offense_pass_td = Statistics.saved_offense_df['TD'].loc[Statistics.saved_offense_df['Tm'] == name].values[0]
+        self.offense_nya = Statistics.saved_offense_df['NY/A'].loc[Statistics.saved_offense_df['Tm'] == name].values[0]
+        self.defense_scp = Statistics.saved_defense_df['Sc%'].loc[Statistics.saved_defense_df['Tm'] == name].values[0]
+        self.defense_yp = Statistics.saved_defense_df['Y/P'].loc[Statistics.saved_defense_df['Tm'] == name].values[0]
+        self.defense_1std = Statistics.saved_defense_df['1stD'].loc[Statistics.saved_defense_df['Tm'] == name].values[0]
+        self.defense_rush_td = Statistics.saved_defense_df['TD_1'].loc[Statistics.saved_defense_df['Tm'] == name].values[0]
+        self.defense_rush_yds = Statistics.saved_defense_df['Yds_2'].loc[Statistics.saved_defense_df['Tm'] == name].values[0]
 
 
-@dataclass()
 class Teams:
     all = {'Cardinals': Team('Arizona Cardinals'),
            'Falcons': Team('Atlanta Falcons'),
@@ -63,9 +63,8 @@ class Teams:
            'Jets': Team('New York Jets'),
            'Eagles': Team('Philadelphia Eagles'),
            'Steelers': Team('Pittsburgh Steelers'),
-           'Forty_nine_ers': Team('San Francisco 49ers'),
+           '49ers': Team('San Francisco 49ers'),
            'Seahawks': Team('Seattle Seahawks'),
            'Buccaneers': Team('Tampa Bay Buccaneers'),
            'Titans': Team('Tennessee Titans'),
            'Commanders': Team('Washington Commanders')}
-

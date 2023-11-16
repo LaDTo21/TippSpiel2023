@@ -1,3 +1,0 @@
-from TippSpiel2023.TippSpiel2023.console_output import ConsoleOutput
-
-ConsoleOutput
