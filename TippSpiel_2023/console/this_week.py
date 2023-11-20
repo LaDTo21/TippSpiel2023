@@ -53,7 +53,7 @@ class ThisWeek:
         week_count = int(datetime.datetime.now(tz=timezone).strftime("%U"))
         count = 0
         for team in Teams.all:
-            temp_string = Statistics.schedule_df[week_count].loc[
+            temp_string = Statistics.schedule_df[week_count - 1].loc[
                 Statistics.schedule_df['Teams'] == Teams.all[team].name][count]
             if temp_string.startswith(('@', 'vs.')):
                 temp_string = temp_string.split()[1]

@@ -16,7 +16,6 @@ class Team:
     defense_rush_yds: int
 
     def __init__(self, name):
-
         self.name = name
         self.short_name = name.split()[-1]
         self.offense_scp = Statistics.saved_offense_df['Sc%'].loc[Statistics.saved_offense_df['Tm'] == name].values[0]
